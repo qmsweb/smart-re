@@ -1,0 +1,232 @@
+/* الأساسيات */
+:root {
+    --primary-color: #4e54c8;
+    --secondary-color: #8f94fb;
+    --text-color: #333;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--light-color);
+    line-height: 1.6;
+}
+
+/* التنقل */
+nav {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 0 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+}
+
+/* الهيدر */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 0 1rem;
+}
+
+.animate-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.animate-subtitle {
+    font-size: 1.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* الأقسام */
+.section {
+    padding: 5rem 1rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* أنواع الذكاء */
+.intelligence-types {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.type-card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.type-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.type-card h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+/* نموذج 3D للدماغ */
+#brain-3d-container {
+    width: 100%;
+    height: 500px;
+    background: #eee;
+    border-radius: 10px;
+    margin: 2rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* الخريطة الذهنية */
+.mindmap-container {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+}
+
+.mindmap-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--primary-color);
+    color: white;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 0 20px rgba(78, 84, 200, 0.5);
+}
+
+.mindmap-branch {
+    position: absolute;
+    background: white;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    width: 120px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.mindmap-branch:hover {
+    background: var(--secondary-color);
+    color: white;
+    transform: scale(1.1);
+}
+
+.mindmap-connector {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* الفوتر */
+footer {
+    background: var(--dark-color);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+/* تأثيرات الحركة */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate {
+    animation: fadeInUp 1s forwards;
+}
+
+/* التجاوب */
+@media (max-width: 768px) {
+    .intelligence-types {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .animate-title {
+        font-size: 2rem;
+    }
+    
+    .animate-subtitle {
+        font-size: 1.2rem;
+    }
+}
