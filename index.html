@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عالم الذكاء البشري</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.4/dist/gsap.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#intro">مقدمة</a></li>
+                <li><a href="#types">أنواع الذكاء</a></li>
+                <li><a href="#brain">الدماغ البشري</a></li>
+                <li><a href="#mindmap">الخريطة الذهنية</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1 class="animate-title">اكتشف عالم الذكاء البشري</h1>
+            <p class="animate-subtitle">رحلة في أعقد عضو في جسم الإنسان</p>
+        </div>
+    </header>
+
+    <section id="intro" class="section">
+        <div class="content">
+            <h2>ما هو الذكاء؟</h2>
+            <p>الذكاء هو القدرة على التعلم، الفهم، التفكير المنطقي، التخطيط، حل المشكلات، الإبداع، والتكيف مع البيئة.</p>
+        </div>
+    </section>
+
+    <section id="types" class="section">
+        <div class="content">
+            <h2>أنواع الذكاء</h2>
+            <div class="intelligence-types">
+                <div class="type-card">
+                    <h3>الذكاء اللغوي</h3>
+                    <p>القدرة على استخدام اللغة بفعالية</p>
+                </div>
+                <div class="type-card">
+                    <h3>الذكاء المنطقي-الرياضي</h3>
+                    <p>القدرة على التحليل المنطقي وحل المشكلات</p>
+                </div>
+                <div class="type-card">
+                    <h3>الذكاء المكاني</h3>
+                    <p>القدرة على التصور البصري والمكاني</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="brain" class="section">
+        <div class="content">
+            <h2>الدماغ البشري</h2>
+            <div id="brain-3d-container"></div>
+            <p>يحتوي الدماغ البشري على حوالي 86 مليار خلية عصبية</p>
+        </div>
+    </section>
+
+    <section id="mindmap" class="section">
+        <div class="content">
+            <h2>خريطة ذهنية للذكاء</h2>
+            <div class="mindmap-container">
+                <div class="mindmap-center">الذكاء</div>
+                <div class="mindmap-branch" style="top: 20%; left: 30%;">لغوي</div>
+                <div class="mindmap-branch" style="top: 40%; left: 20%;">منطقي</div>
+                <div class="mindmap-branch" style="top: 60%; left: 30%;">عاطفي</div>
+                <div class="mindmap-branch" style="top: 40%; left: 70%;">إبداعي</div>
+                <div class="mindmap-connector"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2023 موقع الذكاء البشري | تم التطوير باستخدام Three.js وGSAP</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
